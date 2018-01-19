@@ -2,18 +2,22 @@
   "name": "spider",
   "version": "1.0.0",
   "description": "A web crawler engine.",
-  "main": "index.js",
+  "main": "dist/index.js",
   "repository": "https://miltonakash@bitbucket.org/thejocose/spider.git",
   "author": "Akash Milton M",
   "license": "MIT",
   "private": false,
+  "scripts": {
+    "build": "./node_modules/babel-cli/bin/babel.js ./index.js -d ./dist  --presets=babel-preset-env"
+  },
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
-    "console.table": "^0.10.0",
+    "cli-table": "^0.3.1",
     "request": "^2.83.0",
     "request-promise": "^4.2.2"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0"
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1"
   }
 }
