@@ -45,14 +45,14 @@ class Spider {
     print() {
 
         let tableDesign = {
-            head: ['Crawled Pages', 'Failed Crawls', 'Skipped Crawls', 'Downloaded', 'Crawled Pages(from Beginning)']
+            head: ['Crawled Pages', 'Failed Crawls', 'Skipped Crawls', 'Downloaded'/*, 'Crawled Pages(from Beginning)'*/]
             // , colWidths: [100, 200]
         };
 
         if (this.props.showStats) {
             let table = new Table(tableDesign);
             let x = this.stats;
-            table.push([x.success, x.failure, x.skipped, x.downloaded, this.state.visited.length]);
+            table.push([x.success, x.failure, x.skipped, x.downloaded/*, this.state.visited.length*/]);
             console.log(table.toString());
         }
 
@@ -83,7 +83,8 @@ class Spider {
         return new Promise(async (resolve, reject) => {
             if (this.state.isVisited(pageurl)) {
                 this.stats.skipped++;
-                reject();
+                this.print();
+                resolve();
             }
 
             try {
@@ -98,7 +99,6 @@ class Spider {
                 this.print();
                 reject(e);
             }
-            this.print();
 
         });
     }

@@ -1,13 +1,18 @@
-const Spider = require('./index');
+const Spider = require('spider');
 
 let spider = new Spider({showStats:false});
 (async()=>{
-    let $ =await spider.crawl('http://tamiltunes.live/a-r-rahman-a-world-of-music.html');//
-     await spider.crawl('http://tamiltunes.live/a-r-rahman-a-world-of-music.html');//
-    let list = $('[href$=".mp3"]').map((i, el) => $(el).attr('href')).get();
-
-    console.log(list);
-
+        spider.crawl('http://tamiltunes.live/a-r-rahman-a-world-of-music.html')
+            .then($=>console.log("DONE"))
+            .catch(e=>console.log(e));//
+    spider.crawl('http://tamiltunes.live/a-r-rahman-a-world-of-music.html')
+            .then($=>console.log("DONE"))
+            .catch(e=>console.log(e));//
+        // $ = await spider.crawl('http://tamiltunes.live/a-r-rahman-a-world-of-music.html');//
+        // await spider.crawl('http://tamiltunes.live/a-r-rahman-a-world-of-music.html');//
+        let list = $('[href$=".mp3"]').map((i, el) => $(el).attr('href')).get();
+        //
+        // console.log(list);
 })();
 
 // spider.crawl(, ($) =>
