@@ -1,6 +1,6 @@
 {
   "name": "spiders",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A web crawler engine.",
   "main": "dist/index.js",
   "repository": "https://github.com/miltonakash/spiders",
