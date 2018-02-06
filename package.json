@@ -1,9 +1,9 @@
 {
-  "name": "spider",
+  "name": "spiders",
   "version": "1.0.0",
   "description": "A web crawler engine.",
   "main": "dist/index.js",
-  "repository": "https://miltonakash@bitbucket.org/thejocose/spider.git",
+  "repository": "https://github.com/miltonakash/spiders",
   "author": "Akash Milton M",
   "license": "MIT",
   "private": false,
