@@ -1,5 +1,5 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js add babel-plugin-transform-regenerator --dev
+  /usr/bin/node /usr/share/yarn/bin/yarn.js add babel-runtime
 
 PATH: 
   /home/akash/bin:/home/akash/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/akash/Documents/www:/snap/bin
@@ -16,9 +16,14 @@ Platform:
 npm manifest: 
   {
     "name": "spiders",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "A web crawler engine.",
-    "keywords":["crawl","scrape","cheerio","graph"],
+    "keywords": [
+      "crawl",
+      "scrape",
+      "cheerio",
+      "graph"
+    ],
     "main": "dist/index.js",
     "repository": "https://github.com/miltonakash/spiders",
     "author": "Akash Milton M",
@@ -35,6 +40,7 @@ npm manifest:
     },
     "devDependencies": {
       "babel-cli": "^6.26.0",
+      "babel-polyfill": "^6.26.0",
       "babel-preset-env": "^1.6.1"
     }
   }
@@ -1896,4 +1902,4 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
 
 Trace: 
-  Error: EACCES: permission denied, mkdir '/home/akash/Documents/www/spider/node_modules/babel-runtime/node_modules'
+  Error: EACCES: permission denied, mkdir '/home/akash/Documents/www/spider/node_modules/request/node_modules/boom'
