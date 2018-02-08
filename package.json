@@ -1,6 +1,6 @@
 {
   "name": "spiders",
-  "version": "1.0.2",
+  "version": "1.0.4",
   "description": "A web crawler engine.",
   "keywords": [
     "crawl",
@@ -14,9 +14,10 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "build": "./node_modules/babel-cli/bin/babel.js ./index.js -d ./dist  --presets=babel-preset-env"
+    "build": "./node_modules/babel-cli/bin/babel.js ./index.js -d ./dist --plugins transform-runtime --presets=babel-preset-env"
   },
   "dependencies": {
+    "babel-runtime": "^6.26.0",
     "cheerio": "^1.0.0-rc.2",
     "cli-table": "^0.3.1",
     "request": "^2.83.0",
@@ -24,6 +25,7 @@
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
     "babel-polyfill": "^6.26.0",
     "babel-preset-env": "^1.6.1"
   }
