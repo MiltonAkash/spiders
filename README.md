@@ -20,7 +20,7 @@ let spidy = new Spiders();
 //Crawl
 spidy.crawl('http://urltoscrape')
 	.then($ => {
-		let title = $("title").text();
+		let title = $("title").text();//Jquery functions
 		console.log(title);
 	})
 	.catch(e => console.log("error",e));
@@ -37,7 +37,8 @@ let options = {
 	showStats:true,
 	visited:[],//Previsisted NOdes
 	isVisit:function(obj,url){
-	return obj.url == url;}
+	return obj.url == url;},
+	proxy:null,
 	setVisit:function(url){return {url:url}}
 }
 

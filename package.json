@@ -2,6 +2,7 @@
   "name": "spiders",
   "version": "1.0.1",
   "description": "A web crawler engine.",
+  "keywords":["crawl","scrape","cheerio","graph"],
   "main": "dist/index.js",
   "repository": "https://github.com/miltonakash/spiders",
   "author": "Akash Milton M",
