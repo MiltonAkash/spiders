@@ -2,7 +2,7 @@ const cheerio = require('cheerio'); //Jquery for Node
 const reqpro = require('request-promise'); // Request
 const fs = require('fs');
 const Table = require('cli-table');
-
+require('babel-polyfill');
 class Spider {
     constructor(obj = {}) {
         //properties

@@ -1,4 +1,4 @@
-const Spider = require('spider');
+const Spider = require('./dist/index');
 
 let spider = new Spider({showStats:false});
 (async()=>{

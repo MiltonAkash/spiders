@@ -1,8 +1,8 @@
 Arguments: 
-  /usr/bin/node /usr/share/yarn/bin/yarn.js publish
+  /usr/bin/node /usr/share/yarn/bin/yarn.js add babel-plugin-transform-regenerator --dev
 
 PATH: 
-  /home/akash/bin:/home/akash/.local/bin:/home/akash/bin:/home/akash/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/akash/Documents/www:/snap/bin
+  /home/akash/bin:/home/akash/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/akash/Documents/www:/snap/bin
 
 Yarn version: 
   1.3.2
@@ -16,10 +16,11 @@ Platform:
 npm manifest: 
   {
     "name": "spiders",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "description": "A web crawler engine.",
+    "keywords":["crawl","scrape","cheerio","graph"],
     "main": "dist/index.js",
-    "repository": "https://miltonakash@bitbucket.org/thejocose/spider.git",
+    "repository": "https://github.com/miltonakash/spiders",
     "author": "Akash Milton M",
     "license": "MIT",
     "private": false,
@@ -1895,14 +1896,4 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/wrappy/-/wrappy-1.0.2.tgz#b5243d8f3ec1aa35f1364605bc0d1036e30ab69f"
 
 Trace: 
-  Error: canceled
-      at Interface.<anonymous> (/usr/share/yarn/lib/cli.js:121045:13)
-      at emitNone (events.js:106:13)
-      at Interface.emit (events.js:208:7)
-      at Interface._ttyWrite (readline.js:775:16)
-      at ReadStream.onkeypress (readline.js:160:10)
-      at emitTwo (events.js:126:13)
-      at ReadStream.emit (events.js:214:7)
-      at emitKeys (internal/readline.js:420:14)
-      at emitKeys.next (<anonymous>)
-      at ReadStream.onData (readline.js:1011:36)
+  Error: EACCES: permission denied, mkdir '/home/akash/Documents/www/spider/node_modules/babel-runtime/node_modules'

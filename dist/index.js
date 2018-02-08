@@ -10,6 +10,7 @@ var cheerio = require('cheerio'); //Jquery for Node
 var reqpro = require('request-promise'); // Request
 var fs = require('fs');
 var Table = require('cli-table');
+require('babel-polyfill');
 
 var Spider = function () {
     function Spider() {
